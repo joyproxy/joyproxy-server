@@ -1,5 +1,7 @@
 # joyproxy-server
 
+> **Official product page:** [www.joyproxy.com/products/proxy-server](https://www.joyproxy.com/products/proxy-server.html) · [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases)
+
 [English](#english) | [中文](#中文)
 
 ---
