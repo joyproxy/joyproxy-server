@@ -22,13 +22,13 @@ High-performance HTTP / SOCKS5 proxy gateway (SPS) for Linux. Supports optional 
 
 ### Download
 
-Download the prebuilt binary for your platform from [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases).
+Download prebuilt binaries from [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases).
 
-1. Open the Releases page and pick the latest version
-2. Download the `joyproxy` binary (or tarball) for Linux amd64
-3. Upload to your server and run `chmod +x joyproxy`
+1. Open the latest Release (e.g. **v2.2**)
+2. Download `joyproxy-linux-amd64` for Linux amd64
+3. Upload to your server and run `chmod +x joyproxy-linux-amd64`
 
-> No Releases published yet? Watch the [Releases](https://github.com/joyproxy/joyproxy-server/releases) page — binaries will be published there.
+Optional: `joyproxy-centos7-linux-amd64.tar.gz` includes the binary and a short README (CentOS 7.x compatible, glibc 2.17+).
 
 ### Quick Start
 
@@ -179,13 +179,13 @@ GPLv3
 
 ### 下载
 
-从 [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases) 下载对应平台的预编译 `joyproxy` 二进制。
+从 [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases) 下载预编译二进制。
 
-1. 打开 Releases 页面，选择最新版本
-2. 下载 Linux amd64 的 `joyproxy`（或压缩包）
-3. 上传到服务器后执行 `chmod +x joyproxy`
+1. 打开最新 Release（如 **v2.2**）
+2. 下载 Linux amd64 的 `joyproxy-linux-amd64`
+3. 上传到服务器后执行 `chmod +x joyproxy-linux-amd64`
 
-> 若尚未发布 Release，请关注 [Releases](https://github.com/joyproxy/joyproxy-server/releases) 页面，二进制将发布于此。
+可选：`joyproxy-centos7-linux-amd64.tar.gz` 包含二进制与简要说明（兼容 CentOS 7.x，glibc 2.17+）。
 
 ### 快速开始
 

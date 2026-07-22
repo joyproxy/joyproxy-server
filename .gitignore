@@ -3,9 +3,9 @@
 /joyproxy-*
 *.exe
 
-# Build output
-dist/joyproxy-*
-dist/*.tar.gz
+# Local build output and docs (not uploaded to GitHub)
+dist/
+docs/
 
 # IDE / OS
 .idea/
