@@ -4,7 +4,12 @@
 *.exe
 
 # Local build output and docs (not uploaded to GitHub)
-dist/
+dist/*
+!dist/windows/
+dist/windows/*
+!dist/windows/joyproxy.exe
+!dist/windows/joyproxy-gui.exe
+!dist/windows/README.md
 docs/
 
 # IDE / OS
