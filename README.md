@@ -14,7 +14,7 @@
 
 ## English
 
-High-performance HTTP / SOCKS5 proxy gateway (SPS) for Linux. Supports optional external authorization API and optional traffic reporting API.
+High-performance HTTP / SOCKS5 proxy gateway (SPS) for **Linux and Windows**. Supports optional external authorization API and optional traffic reporting API.
 
 **Official website:** https://www.joyproxy.com  
 **Official product page:** https://www.joyproxy.com/products/proxy-server.html
@@ -33,11 +33,22 @@ High-performance HTTP / SOCKS5 proxy gateway (SPS) for Linux. Supports optional 
 
 Download prebuilt binaries from [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases).
 
-1. Open the latest Release (e.g. **v2.2**)
+#### Linux (v2.2)
+
+1. Open [Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2)
 2. Download `joyproxy-linux-amd64` for Linux amd64
 3. Upload to your server and run `chmod +x joyproxy-linux-amd64`
 
 Optional: `joyproxy-centos7-linux-amd64.tar.gz` includes the binary and a short README (CentOS 7.x compatible, glibc 2.17+).
+
+#### Windows (v2.3)
+
+1. Open [Release v2.3](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.3)
+2. Download one of:
+   - [`joyproxy-gui.exe`](https://github.com/joyproxy/joyproxy-server/releases/download/v2.3/joyproxy-gui.exe) — desktop GUI (listen port, auth modes, start/stop, live logs)
+   - [`joyproxy.exe`](https://github.com/joyproxy/joyproxy-server/releases/download/v2.3/joyproxy.exe) — command-line gateway (same `sps` modes as Linux)
+
+Windows builds are also available in [`dist/windows/`](dist/windows/) on this repository.
 
 ### Quick Start
 
@@ -174,7 +185,7 @@ GPLv3
 
 ## 中文
 
-面向 Linux 的高性能 HTTP / SOCKS5 代理网关（SPS）。支持可选的外部鉴权 API 与可选的流量上报 API。
+面向 **Linux 与 Windows** 的高性能 HTTP / SOCKS5 代理网关（SPS）。支持可选的外部鉴权 API 与可选的流量上报 API。
 
 **官方网站：** https://www.joyproxy.com  
 **官方产品页：** https://www.joyproxy.com/products/proxy-server.html
@@ -193,11 +204,22 @@ GPLv3
 
 从 [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases) 下载预编译二进制。
 
-1. 打开最新 Release（如 **v2.2**）
+#### Linux（v2.2）
+
+1. 打开 [Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2)
 2. 下载 Linux amd64 的 `joyproxy-linux-amd64`
 3. 上传到服务器后执行 `chmod +x joyproxy-linux-amd64`
 
 可选：`joyproxy-centos7-linux-amd64.tar.gz` 包含二进制与简要说明（兼容 CentOS 7.x，glibc 2.17+）。
+
+#### Windows（v2.3）
+
+1. 打开 [Release v2.3](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.3)
+2. 下载其一：
+   - [`joyproxy-gui.exe`](https://github.com/joyproxy/joyproxy-server/releases/download/v2.3/joyproxy-gui.exe) — 图形界面版（端口、鉴权模式、启停、实时日志）
+   - [`joyproxy.exe`](https://github.com/joyproxy/joyproxy-server/releases/download/v2.3/joyproxy.exe) — 命令行版（与 Linux 相同的 `sps` 模式）
+
+Windows 版本也可在本仓库 [`dist/windows/`](dist/windows/) 目录获取。
 
 ### 快速开始
 
