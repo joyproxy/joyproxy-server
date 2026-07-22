@@ -1,6 +1,10 @@
 # joyproxy-server
 
-> **Official product page:** [www.joyproxy.com/products/proxy-server](https://www.joyproxy.com/products/proxy-server.html) · [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases)
+- **Official website:** https://www.joyproxy.com
+- **Official product page:** https://www.joyproxy.com/products/proxy-server.html
+- **Download binaries:** https://github.com/joyproxy/joyproxy-server/releases
+
+> **Full documentation is on the official website.** Visit **https://www.joyproxy.com/products/proxy-server.html** for the complete guide (command-line flags, five startup modes, auth/traffic API reference). This README is a short technical reference only.
 
 [English](#english) | [中文](#中文)
 
@@ -11,6 +15,9 @@
 ## English
 
 High-performance HTTP / SOCKS5 proxy gateway (SPS) for Linux. Supports optional external authorization API and optional traffic reporting API.
+
+**Official website:** https://www.joyproxy.com  
+**Official product page:** https://www.joyproxy.com/products/proxy-server.html
 
 ### Features
 
@@ -168,6 +175,9 @@ GPLv3
 ## 中文
 
 面向 Linux 的高性能 HTTP / SOCKS5 代理网关（SPS）。支持可选的外部鉴权 API 与可选的流量上报 API。
+
+**官方网站：** https://www.joyproxy.com  
+**官方产品页：** https://www.joyproxy.com/products/proxy-server.html
 
 ### 功能特性
 
