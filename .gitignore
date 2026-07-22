@@ -1,0 +1,18 @@
+# Binaries (root only)
+/joyproxy
+/joyproxy-*
+*.exe
+
+# Build output
+dist/joyproxy-*
+dist/*.tar.gz
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Legacy reference code (not for distribution)
+ref/
