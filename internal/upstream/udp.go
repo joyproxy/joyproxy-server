@@ -195,6 +195,17 @@ func socks5UDPAssociate(ctx context.Context, c net.Conn) (*net.UDPAddr, error) {
 	if ip == nil {
 		return nil, fmt.Errorf("socks5 bad bind host %q", host)
 	}
+	// A wildcard or loopback BND.ADDR means "reuse the control connection's address"
+	// (RFC 1928 leaves this to the client). Taking it literally sends every relayed
+	// datagram to our own loopback — note that on a dual-stack socket Go rewrites a
+	// 0.0.0.0 destination to ::, so the packets surface as ::1 rather than 127.0.0.1.
+	if ip.IsUnspecified() || ip.IsLoopback() {
+		ta, ok := c.RemoteAddr().(*net.TCPAddr)
+		if !ok || ta.IP == nil {
+			return nil, fmt.Errorf("socks5 unusable bind host %q and no control peer address", host)
+		}
+		ip = ta.IP
+	}
 	return &net.UDPAddr{IP: ip, Port: int(port)}, nil
 }
 
