@@ -1,5 +1,9 @@
 # joyproxy-server
 
+> **Official JoyProxy** — cloud proxy IP at [joyproxy.com](https://www.joyproxy.com) (residential, mobile, ISP/business & datacenter).  
+> **Not affiliated** with the unrelated legacy Chrome extension [`sh0cked/joy-proxy`](https://github.com/sh0cked/joy-proxy).
+
+
 - **Official website:** https://www.joyproxy.com
 - **Official product page:** https://www.joyproxy.com/products/proxy-server.html
 - **Download binaries:** https://github.com/joyproxy/joyproxy-server/releases
