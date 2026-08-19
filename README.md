@@ -33,13 +33,13 @@ High-performance HTTP / SOCKS5 proxy gateway (SPS) for **Linux and Windows**. Su
 
 Download prebuilt binaries from [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases).
 
-#### Linux (v2.2)
+#### Linux (v2.3)
 
-1. Open [Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2)
+1. Open [Release v2.3](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.3)
 2. Download `joyproxy-linux-amd64` for Linux amd64
 3. Upload to your server and run `chmod +x joyproxy-linux-amd64`
 
-Optional: `joyproxy-centos7-linux-amd64.tar.gz` includes the binary and a short README (CentOS 7.x compatible, glibc 2.17+).
+Optional: `joyproxy-centos7-linux-amd64.tar.gz` on [Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2) (CentOS 7.x compatible, glibc 2.17+).
 
 #### Windows (v2.3)
 
@@ -175,6 +175,24 @@ You can combine auth API and traffic API in one command.
 
 With **systemd**, add `--no-detach` so the main process does not exit immediately.
 
+### Version history
+
+#### v2.3 (recommended)
+
+- **SOCKS5 UDP via `socks5://` upstream** — when auth returns `socks5://...`, UDP datagrams relay through the parent proxy (same path as TCP).
+- **Fix UDP upstream relay** — if the parent SOCKS5 server replies to `UDP ASSOCIATE` with `0.0.0.0` or a loopback address, use the control TCP peer address for relay (not local loopback).
+- **Includes v2.2** — `UDP ASSOCIATE` reply to clients uses `-g` public IP so remote clients can reach the relay port.
+
+**Auth note:** for SOCKS5 / UDP sessions (`service=socks`), your auth API must return `upstream: socks5://...`. `http://` upstream is rejected for UDP.
+
+#### v2.2
+
+- `UDP ASSOCIATE` BND address prefers `-g` public IP instead of the local NIC IP.
+
+#### v2.1
+
+- SOCKS5 UDP forwarding through `socks5://` upstream on the same listen port.
+
 ### License
 
 GPLv3
@@ -204,13 +222,13 @@ GPLv3
 
 从 [GitHub Releases](https://github.com/joyproxy/joyproxy-server/releases) 下载预编译二进制。
 
-#### Linux（v2.2）
+#### Linux（v2.3）
 
-1. 打开 [Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2)
+1. 打开 [Release v2.3](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.3)
 2. 下载 Linux amd64 的 `joyproxy-linux-amd64`
 3. 上传到服务器后执行 `chmod +x joyproxy-linux-amd64`
 
-可选：`joyproxy-centos7-linux-amd64.tar.gz` 包含二进制与简要说明（兼容 CentOS 7.x，glibc 2.17+）。
+可选：[Release v2.2](https://github.com/joyproxy/joyproxy-server/releases/tag/v2.2) 中的 `joyproxy-centos7-linux-amd64.tar.gz`（兼容 CentOS 7.x，glibc 2.17+）。
 
 #### Windows（v2.3）
 
@@ -343,6 +361,24 @@ Windows 版本也可在本仓库 [`dist/windows/`](dist/windows/) 目录获取�
 ```
 
 使用 **systemd** 时请加 `--no-detach`，避免主进程立即退出。
+
+### 版本历史
+
+#### v2.3（当前推荐）
+
+- **SOCKS5 UDP 经 `socks5://` 上级转发** — 鉴权返回 `socks5://...` 时，UDP 数据经上级中继（与 TCP 同路径）。
+- **修复 UDP 上级中继地址** — 上级 `UDP ASSOCIATE` 回 `0.0.0.0` 或回环时，改用控制 TCP 对端地址中继（不再打到本机回环）。
+- **包含 v2.2** — 对客户端 `UDP ASSOCIATE` 回报地址优先 `-g` 公网 IP，外网可访问中继端口。
+
+**鉴权注意：** SOCKS5 / UDP 会话（`service=socks`）时，鉴权 API 须返回 `upstream: socks5://...`；仅 `http://` 时 UDP 无法走上级。
+
+#### v2.2
+
+- `UDP ASSOCIATE` 回报地址优先 `-g` 公网 IP，不再用网卡内网 IP。
+
+#### v2.1
+
+- SOCKS5 UDP 可经 `socks5://` 上级转发，与 HTTP/SOCKS5 TCP 共用监听端口。
 
 ### 许可证
 
